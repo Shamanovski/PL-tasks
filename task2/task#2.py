@@ -3,7 +3,7 @@ import enum
 import math
 
 
-class Distance(enum.Enum):
+class Distance(enum.IntEnum):
     OnTheCircle = 0
     InsideTheCircle = 1
     OutsideTheCircle = 2
@@ -22,11 +22,11 @@ def main():
         x, y = float(x), float(y)
         distance_radius_delta = math.pow((x - centre_x), 2) + math.pow((y - centre_y), 2) - radius**2
         if distance_radius_delta == 0:
-            print(Distance.OnTheCircle)
+            print(int(Distance.OnTheCircle))
         elif distance_radius_delta < 0:
-            print(Distance.InsideTheCircle)
+            print(int(Distance.InsideTheCircle))
         else:
-            print(Distance.OutsideTheCircle)
+            print(int(Distance.OutsideTheCircle))
 
 
 main()
