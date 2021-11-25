@@ -20,12 +20,11 @@ def main():
     for point in points:
         x, y = point.split()
         x, y = float(x), float(y)
-        # comment the formula
-        result = math.pow((x - centre_x), 2) + math.pow((y - centre_y), 2) - radius**2
-        print(result)
-        if result == 0:
+        # under this formula, location of a point relative to a circle is ¡
+        distance_radius_delta = math.pow((x - centre_x), 2) + math.pow((y - centre_y), 2) - radius**2
+        if distance_radius_delta == 0:
             print(Distance.OnTheCircle)
-        elif result < 0:
+        elif distance_radius_delta < 0:
             print(Distance.InsideTheCircle)
         else:
             print(Distance.OutsideTheCircle)
