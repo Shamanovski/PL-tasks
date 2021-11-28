@@ -1,3 +1,3 @@
 # PL-tasks
 
-task1 is not complete yet
+solution of the tasks issued by Performance Lab
